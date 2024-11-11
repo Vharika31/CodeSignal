@@ -1,0 +1,21 @@
+1)Write a function that returns the sum of two numbers.
+def solution(param1, param2):
+    return param1 + param2
+
+2)Given a year, return the century it is in. The first century spans from the year 1 up to and including the year 100, the second - from the year 101 up to and including the year 200, etc.
+def solution(year):
+    return (year - 1) // 100 + 1
+
+3)Given the string, check if it is a palindrome.
+def solution(inputString):
+    left = 0
+    right = len(inputString) - 1
+    
+    while left < right:
+        if inputString[left] != inputString[right]:
+            return False
+        left += 1
+        right -= 1
+    
+    return True
+
