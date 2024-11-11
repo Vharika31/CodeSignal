@@ -1,0 +1,37 @@
+1)ProejctList
+CREATE PROCEDURE solution()
+BEGIN
+  SELECT project_name,team_lead,income FROM Projects 
+  ORDER BY internal_id ASC;
+END
+
+2)CountriesSelection
+ CREATE PROCEDURE solution()
+BEGIN
+     SELECT * FROM countries
+	 WHERE continent='Africa'
+	 ORDER BY name ASC;
+END
+
+3)MOnethlyScholarships
+CREATE PROCEDURE solution()
+BEGIN
+SELECT id,scholarship/12 AS scholarship FROM scholarships
+ORDER BY id ASC;
+
+END
+
+4)ProejectsTeam
+CREATE PROCEDURE solution()
+BEGIN
+SELECT DISTINCT name FROM projectLog
+ORDER BY name ASC;
+END
+
+5)AutomaticNotifications
+CREATE PROCEDURE solution()
+    SELECT email
+    FROM users
+    WHERE lower(role) NOT IN ("admin", "premium")
+
+    ORDER BY email;
