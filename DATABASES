@@ -35,3 +35,10 @@ CREATE PROCEDURE solution()
     WHERE lower(role) NOT IN ("admin", "premium")
 
     ORDER BY email;
+
+6)VolleyBallResults
+CREATE PROCEDURE solution()
+BEGIN
+SELECT * FROM results
+ORDER BY wins ASC;
+END
