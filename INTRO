@@ -66,3 +66,15 @@ def solution(inputArray):
             max = current
     
     return max
+
+8)MatrixElementsSum
+def solution(inputArray):
+    max = float('-inf')
+    
+    for i in range(len(inputArray) - 1):
+        current = inputArray[i] * inputArray[i + 1]
+        
+        if current > max:
+            max = current
+    
+    return max
