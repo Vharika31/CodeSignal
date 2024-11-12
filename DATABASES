@@ -53,3 +53,9 @@ BEGIN
  ORDER BY name ASC
  LIMIT 1;
  END 
+
+8)ContestLeaderBoard
+CREATE PROCEDURE solution()
+BEGIN
+	SELECT name FROM leaderboard ORDER BY score DESC LIMIT 5 OFFSET 3;
+END
