@@ -100,3 +100,16 @@ def solution(n):
     s1= sum(numbers[0:(length//2)])
     s2=sum(numbers[length//2:length])
     return s1==s2
+
+12)sortByheight
+def solution(a):
+    heights = [height for height in a if height != -1]
+    heights.sort()
+    index = 0
+
+    for i in range(len(a)):
+        if a[i] != -1:
+            a[i] = heights[index]
+            index += 1
+    return a
+    
