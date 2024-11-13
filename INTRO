@@ -84,3 +84,12 @@ def solution(inputArray):
     max_value=max([len(i) for i in inputArray])
     return list(filter(lambda x: len(x) == max_value,inputArray))
 
+10)commonCharacterCount
+def solution(s1, s2):
+    res = 0
+    for p1 in s1:
+        if p1 in s2:
+            s2=s2.replace(p1,'',1)
+            res+=1
+    return res
+
