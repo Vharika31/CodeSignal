@@ -104,3 +104,14 @@ CREATE PROCEDURE solution()
     SELECT id, IF ( given_answer is Null, 'no answer', IF(given_answer = correct_answer, 'correct','incorrect') ) AS checks
     FROM answers
     ORDER BY id;
+
+15)expressionsVerification
+CREATE PROCEDURE expressionsVerification()
+BEGIN
+	SELECT * 
+    FROM expressions
+    WHERE (operation='+' AND c=a+b)
+        OR(operation='-' AND c=a-b)
+        OR(operation='/' AND c=a/b)
+        OR(operation='*' AND c=a*b);
+END
