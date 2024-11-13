@@ -77,3 +77,9 @@ BEGIN
     FROM mischief
     ORDER BY weekday,field(author,"Huey","Dewey","Louie"),mischief_date,title;
 END
+
+11)SuspectsInvestigation
+CREATE PROCEDURE solution()
+BEGIN
+	SELECT id,name,surname FROM Suspect WHERE upper(name) LIKE 'b%' AND height<=170 AND upper(surname) LIKE 'gre_n';
+END
