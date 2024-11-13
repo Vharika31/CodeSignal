@@ -113,3 +113,14 @@ def solution(a):
             index += 1
     return a
     
+13)reverseInParenthesis
+def solution(inputString):
+    stack = []
+    chars = list(inputString)
+    for i, char in enumerate(chars):
+        if char == '(':
+            stack.append(i)
+        elif char == ')':
+            start = stack.pop()
+            chars[start+1:i] = reversed(chars[start+1:i])
+    return ''.join(char for char in chars if char not in '()')
