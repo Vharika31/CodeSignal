@@ -115,3 +115,11 @@ BEGIN
         OR(operation='/' AND c=a/b)
         OR(operation='*' AND c=a*b);
 END
+
+16)NewSubscriber
+CREATE PROCEDURE solution()
+BEGIN
+	SELECT subscriber FROM full_year WHERE instr(newspaper,'Daily')
+    UNION
+    SELECT subscriber FROM half_year WHERE instr(newspaper,'Daily') ORDER BY subscriber;
+END
