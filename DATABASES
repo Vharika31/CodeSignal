@@ -83,3 +83,10 @@ CREATE PROCEDURE solution()
 BEGIN
 	SELECT id,name,surname FROM Suspect WHERE upper(name) LIKE 'b%' AND height<=170 AND upper(surname) LIKE 'gre_n';
 END
+
+12)suspectsInvestigation2
+CREATE PROCEDURE solution()
+BEGIN
+	SELECT id,name,surname 
+	FROM Suspect WHERE height <= 170 OR upper(surname) NOT LIKE 'gre_n' OR upper(name) NOT LIKE 'B%' ORDER BY id;
+END
