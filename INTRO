@@ -78,3 +78,9 @@ def solution(inputArray):
             max = current
     
     return max
+
+9)allLongestStrings
+def solution(inputArray):
+    max_value=max([len(i) for i in inputArray])
+    return list(filter(lambda x: len(x) == max_value,inputArray))
+
