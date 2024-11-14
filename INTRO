@@ -180,3 +180,5 @@ def solution(a, b):
         return set(check_a) == set(check_b)
     else:
         return False
+
+18)PalindroneRearranging
