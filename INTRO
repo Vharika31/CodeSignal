@@ -146,3 +146,5 @@ def solution(a):
         else:
             alt_sum[1] += a[i]
     return alt_sum
+
+16)Aresimilar
